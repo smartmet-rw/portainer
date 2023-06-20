@@ -5,9 +5,11 @@ services:
     container_name: portainer
     privileged: true
     restart: always
+    environment:
+      - APPDOMAIN=apps.meteorwanda.gov.rw
     labels:
       - "traefik.http.routers.portainer.entrypoints=websecure"
-      - "traefik.http.routers.portainer.rule=Host(`portainer.rw.meteo.fi`)"
+      - "traefik.http.routers.portainer.rule=Host(`portainer.apps.meteorwanda.gov.rw`)"
       - "traefik.http.services.portainer.loadbalancer.server.port=9000"
     volumes:
           # So that Portaomer can listen to the Docker events
