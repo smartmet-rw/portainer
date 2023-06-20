@@ -5,7 +5,7 @@ services:
     container_name: smartmetserver
     labels:
       - "traefik.http.routers.smartmetserver.entrypoints=websecure"
-      - "traefik.http.routers.smartmetserver.rule=Host(`data.${APPDOMAIN:-local}`)"
+      - "traefik.http.routers.smartmetserver.rule=Host(`data.apps.meteorwanda.gov.rw`)"
       - "traefik.http.services.smartmetserver.loadbalancer.server.port=8080"
     volumes:
       - /smartmet/data/gfs/eastafrica/surface/querydata:/smartmet/data/gfs/surface
