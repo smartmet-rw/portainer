@@ -18,6 +18,7 @@ services:
     image: fmidev/fmidownloader
     container_name: fmidownloader-ecmwf-surface
     command:
+      - "--origintime=2024-08-27T00:00Z"
       - "--producer=ecmwf"
       - "--dir=surface"
       - "--filename=ecmwf_world_surface"
