@@ -1,4 +1,3 @@
-version: '3'
 services:
   smartmetserver:
     image: fmidev/smartmetserver:latest
