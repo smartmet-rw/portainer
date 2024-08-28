@@ -11,6 +11,11 @@ services:
       - /smartmet/data/gfs/eastafrica/pressure/querydata:/smartmet/data/gfs/pressure
       - /smartmet/data/ecmwf/world/surface/querydata:/smartmet/data/ecmwf/surface
       - smartmetserver-storage-cnf:/etc/smartmet
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1024m"
+        max-file: "2"
     networks:
       - traefik-network
     restart: unless-stopped
