@@ -9,14 +9,9 @@ services:
       - MQTT_TOPIC=origin/a/wis2/+/data/core/weather/surface-based-observations/synop
       - MQTT_USERNAME=everyone
       - MQTT_PASSWORD=everyone
-    command: 
-      - "-server"
-      - "${MQTT_SERVER}"
-      - "-topic"
-      - "${MQTT_TOPIC}"
-      - "-username"
-      - "${MQTT_USERNAME}"
-      - "-password"
-      - "${MQTT_PASSWORD}"
-      - "-download"
-      - "/downloads"
+    command: >
+      -server ${MQTT_SERVER}
+      -topic ${MQTT_TOPIC}
+      -username ${MQTT_USERNAME}
+      -password ${MQTT_PASSWORD}
+      -download /downloads
