@@ -3,7 +3,7 @@ services:
     image: wis2downloader
     container_name: wis2downloader
     volumes:
-      - /smartmet/data/incoming/wis2:/downloads
+      - /smartmet/data/incoming/wis2/synop:/downloads
     command: >
       -server ssl://globalbroker.meteo.fr:8883
       -topic origin/a/wis2/+/data/core/weather/surface-based-observations/synop
