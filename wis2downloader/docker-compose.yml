@@ -10,8 +10,5 @@ services:
       - MQTT_USERNAME=everyone
       - MQTT_PASSWORD=everyone
     command: >
-      -server ${MQTT_SERVER}
-      -topic ${MQTT_TOPIC}
-      -username ${MQTT_USERNAME}
-      -password ${MQTT_PASSWORD}
-      -download /downloads
+      sh -c "echo ${MQTT_SERVER} && echo ${MQTT_TOPIC} && echo ${MQTT_USERNAME} && echo ${MQTT_PASSWORD}"
+
