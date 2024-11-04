@@ -11,6 +11,7 @@ services:
       - /smartmet/data/gfs/eastafrica/pressure/querydata:/smartmet/data/gfs/pressure
       - /smartmet/data/ecmwf/world/surface/querydata:/smartmet/data/ecmwf/surface
       - /smartmet/data/wrf/small/surface/querydata:/smartmet/data/wrf/surface
+      - /smartmet/data/meteor/rwanda/surface/querydata:/smartmet/data/meteor/surface
       - smartmetserver-storage-cnf:/etc/smartmet
     logging:
       driver: "json-file"
