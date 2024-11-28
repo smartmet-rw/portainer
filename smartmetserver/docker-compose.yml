@@ -14,6 +14,7 @@ services:
       - /smartmet/data/ecmwf/world/surface/querydata:/smartmet/data/ecmwf/surface
       - /smartmet/data/wrf/small/surface/querydata:/smartmet/data/wrf/surface
       - /smartmet/data/meteor/rwanda/surface/querydata:/smartmet/data/meteor/surface
+      - /smartmet/data/aws/rwanda/querydata:/smartmet/data/aws/surface
       - /smartmet/share/wms:/smartmet/share/wms
       - smartmetserver-storage-cnf:/etc/smartmet
     logging:
