@@ -11,4 +11,16 @@ services:
       -username everyone
       -password everyone
       -download /downloads
+  wis2downloadergts:
+    image: fmidev/wis2downloader
+    container_name: wis2downloadergts
+    restart: always
+    volumes:
+      - /smartmet/data/incoming/gts/synop-bufr/synop:/downloads
+    command: >
+      -server ssl://globalbroker.meteo.fr:8883
+      -topic origin/a/wis2/de-dwd-gts-to-wis2/data/core/I
+      -username everyone
+      -password everyone
+      -download /downloads
 
