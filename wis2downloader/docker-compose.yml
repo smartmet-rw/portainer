@@ -19,7 +19,7 @@ services:
       - /smartmet/data/incoming/gts/synop-bufr/synop:/downloads
     command: >
       -server ssl://globalbroker.meteo.fr:8883
-      -topic origin/a/wis2/de-dwd-gts-to-wis2/data/core/I
+      -topic "origin/a/wis2/de-dwd-gts-to-wis2/data/core/I/#"
       -username everyone
       -password everyone
       -download /downloads
