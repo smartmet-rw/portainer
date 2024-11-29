@@ -11,6 +11,7 @@ services:
       -username everyone
       -password everyone
       -download /downloads
+      -clientid rw-smartmet-wis2downloader-synop
   wis2downloadergts:
     image: fmidev/wis2downloader
     container_name: wis2downloadergts
@@ -23,4 +24,5 @@ services:
       -username everyone
       -password everyone
       -download /downloads
+      -clientid rw-smartmet-wis2downloader-synop-gts
 
